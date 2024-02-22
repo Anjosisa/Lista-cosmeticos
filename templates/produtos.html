@@ -1,0 +1,32 @@
+{% extends 'index.html'%}
+
+{% block navbar %}
+{% include 'navbar_cad.html' %}
+{% endblock %}
+
+{% block body %}
+<main class="container mt-5 bg-white p-md-5 rounded-3 shadow marca_dagua">
+  <div>
+    <h2 class="text-dark bg-white table_o">Cosméticos</h2>
+  </div>
+  <table class="table table-hover table_o">
+      <thead>
+          <tr>
+            <th scope="col">Produto</th>
+            <th scope="col">Marca</th>
+            <th scope="col">R$</th>
+          </tr>
+      </thead>
+      <tbody class="tabela-js">
+          {% for index, item in lista_produtos.iterrows() %}
+          <tr>
+              <td>{{ item.Produto }}</td>
+              <td>{{ item.Marca }}</td>
+              <td>{{ item.Valor}}</td>
+          </tr>
+          {% endfor %}
+      </tbody>
+  </table>
+</main>
+{% endblock %}
+  

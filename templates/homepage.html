@@ -1,0 +1,28 @@
+{% extends 'index.html'%}
+
+{% block navbar%}
+{% include 'navbar.html' %}
+{% endblock %}
+
+{% block body %}
+<main>
+    <img id="banner" src="{{url_for('static', filename='./img/Banner.jpg')}}" alt="Banner">
+    <div class="container chamada-acao">
+        <p class=" phome">Bem-vindo à sua jornada de beleza extraordinária! Explore a página de cosméticos que redefine os padrões de glamour e inovação. Nossa coleção exclusiva oferece produtos de alta qualidade, mergulhados em luxo e formulados para realçar sua beleza única. Das últimas tendências em maquiagem a tratamentos revolucionários para a pele, cada produto é uma promessa de transformação.
+            <br>
+            Deixe-se envolver pela magia dos cosméticos que vão além da aparência, celebrando a expressão individual e a confiança. Em nossa página, a beleza é uma experiência vibrante, repleta de fórmulas inovadoras e compromisso com a sustentabilidade. Descubra o poder empolgante da sua própria beleza - cada produto é uma celebração do seu estilo pessoal. Aventure-se agora e liberte o extraordinário em você!</p>
+            <div id="botao-prod">
+                <button class="btn btn-outline-light border-3 justify-content-center rounded-5" style="width: 200px; " type="button"><a href="/list">APROVEITE</a></button>
+            </div>
+
+            <style>
+                #botao-prod .btn-outline-light:hover a{
+                    color: #ad57fd;
+                }
+            </style>
+        
+    </div>
+</main>
+    
+    
+{% endblock %}

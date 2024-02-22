@@ -1,0 +1,50 @@
+<header>
+    <nav class="navbar navbar-expand-lg rounded-3 shadow" style="background-color: #ad57fd; padding-right: 20px;">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#"></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav container">
+            <img id="logo"src="{{url_for('static', filename='./img/logo.jpg')}}" alt="Banner">
+            <a class="nav-link active link-light d-flex justify-content-center" aria-current="page" href="/">Home</a>
+            <a class="nav-link link-light d-flex justify-content-center" href="/list">Cosméticos</a>
+          </div>
+        </div>
+      </div>
+      <!-- MODAL ADICIONAR -->
+        <div>
+            <button type="button" class="btn botao btn-outline-light border-3 justify-content-center rounded-5" style="width: 120px;" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@getbootstrap">Adicionar</button>
+            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                        <h1 class="modal-title fs-5 btn-success" id="exampleModalLabel">Cadastro de Produto</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <div class="mb-3">
+                                <label for="nome" class="col-form-label">Produto</label>
+                                <input type="text" class="form-control" id="nome" required>
+                            </div>
+                            <div>
+                                <label for="marca" class="col-form-label">Marca</label>
+                                <input type="text" class="form-control" id="marca" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="valor" class="col-form-label">R$</label>
+                                <input type="number" class="form-control" id="valor" required>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn des_modal" data-bs-dismiss="modal">Descartar</button>
+                        <button type="button" class="btn add_modal">Adicionar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+</header>
